@@ -1,0 +1,10 @@
+[package]
+name = "lilypond-language-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = "1.0.204"
+serde_json = "1.0.120"
+tokio = "1.38.0"
+tower-lsp = "0.20.0"

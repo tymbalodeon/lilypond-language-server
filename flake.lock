@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1720031269,
+        "narHash": "sha256-rwz8NJZV+387rnWpTYcXaRNvzUSnnF9aHONoJIYmiUQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9f4128e00b0ae8ec65918efeba59db998750ead6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nushell-syntax": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1692935709,
+        "narHash": "sha256-paayZP6P+tzGnla7k+HrF+dcTKUyU806MTtUeurhvdg=",
+        "owner": "stevenxxiu",
+        "repo": "sublime_text_nushell",
+        "rev": "66b00ff639dc8cecb688a0e1d81d13613b772f66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevenxxiu",
+        "repo": "sublime_text_nushell",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "nushell-syntax": "nushell-syntax"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
