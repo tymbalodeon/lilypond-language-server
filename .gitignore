@@ -1,15 +1,5 @@
 .config
 .direnv
 .envrc
-
-
-# Added by cargo
-
-/target
-
-
-# Added by cargo
-#
-# already existing elements were commented out
-
-#/target
+.pdm-python
+.venv

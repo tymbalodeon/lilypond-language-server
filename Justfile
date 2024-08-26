@@ -1,9 +1,13 @@
 @_help:
-    ./scripts/help.nu
+    ./scripts/_help.nu
 
 # Add dependencies
 @add *dependencies:
     ./scripts/add.nu {{ dependencies }}
+
+# View file annotated with version control information
+@annotate *filename:
+    ./scripts/annotate.nu {{ invocation_directory() }} {{ filename }}
 
 # Build the application
 @build *release:
@@ -36,11 +40,11 @@
 # Search available `just` recipes
 [no-exit-message]
 @find-recipe *search_term:
-    ./scripts/find-recipe.nu {{ search_term }}
+    ./scripts/find-recipe.nu {{ invocation_directory() }} {{ search_term }}
 
-# Search project history
-@history *search_term:
-    ./scripts/history.nu {{ search_term }}
+# View project history
+@history *args:
+    ./scripts/history.nu {{ invocation_directory() }} {{ args }}
 
 # Initialize direnv environment
 @init *help:
@@ -53,6 +57,10 @@
 # View issues
 @issue *args:
     ./scripts/issue.nu {{ args }}
+
+# Create a new release
+@release *args:
+    ./scripts/release.nu  {{ args }}
 
 # View remote repository
 @remote *web:
@@ -70,10 +78,14 @@
 @stats *help:
     ./scripts/stats.nu {{ help }}
 
+# Run the tests
+@test *package:
+    ./scripts/test.nu {{ package }}
+
 # Update dependencies
 @update-deps *help:
     ./scripts/update-deps.nu {{ help }}
 
 # View the source code for a recipe
 @view-source *recipe:
-    ./scripts/view-source.nu {{ recipe }}
+    ./scripts/view-source.nu {{ invocation_directory() }} {{ recipe }}
